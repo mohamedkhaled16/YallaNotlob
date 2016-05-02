@@ -1,0 +1,53 @@
+<div class="row ">
+  <div class="col-lg-12 ">
+    <%= form_for OrderDetail.new, :html => {:class => "form-inline"} do |f| %>
+        <% if OrderDetail.new.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(OrderDetail.new.errors.count, "error") %> prohibited this order_detail from
+                being
+                saved:</h2>
+
+              <ul>
+                <% OrderDetail.new.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+        <div class="form-group">
+          <div class="field">
+            <%= f.label :item %><br>
+            <%= f.text_field :item,class:"form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="field">
+            <%= f.label :qty %><br>
+            <%= f.number_field :qty,class:"form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="field">
+            <%= f.label :price %><br>
+            <%= f.number_field :price ,class:"form-control"%>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <div class="field">
+            <%= f.label :comment %><br>
+            <%= f.text_field :comment ,class:"form-control"%>
+          </div>
+        </div>
+
+        <%= f.hidden_field :notification_id ,value:not_id,class:"form-control"%>
+
+        <div class="actions">
+          <%= f.button "Add Order Detalis",class:"mybutton btn"%>
+        </div>
+    <% end %>
+
+  </div>
+</div>

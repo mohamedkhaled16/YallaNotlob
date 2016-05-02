@@ -1,0 +1,41 @@
+<div class="header">
+  <div class="wrap">
+    <div class="top-header">
+      <div class="logo">
+        <a href="index.html"><%= image_tag("logo2.png",width:"250px") %></a>
+      </div>
+      <div class="social-icons">
+        <ul>
+          <li><a href="#"><%= image_tag("facebook.png") %></a></li>
+          <li><a href="#"><%= image_tag("twitter.png") %></a></li>
+          <li><a href="#"><%= image_tag("google.png") %></a></li>
+        </ul>
+      </div>
+      <div class="clear"> </div>
+    </div>
+    <!---start-top-nav---->
+    <div class="top-nav">
+      <div class="top-nav-left">
+        <ul>
+          <li><%= link_to 'Home', root_path %></li>
+<<<<<<< HEAD
+          <li><a href="about.html">Friends</a></li>
+=======
+          <li><%= link_to 'Friends', friends_path %></li>
+>>>>>>> 18debbd8a101b77a41b5c09b994b1a698ee01512
+          <li><%= link_to 'Groups', groups_path %></li>
+          <li><%= link_to 'Orders', ordrs_path %></li>
+          <li><%= link_to 'Signout', destroy_user_session_path, method: :delete %></li>
+          <div class="clear"> </div>
+        </ul>
+      </div>
+      <div class="top-nav-right">
+        <form>
+          <input type="text"><input type="submit" value="" />
+        </form>
+      </div>
+      <div class="clear"> </div>
+    </div>
+    <!---End-top-nav---->
+  </div>
+</div>
